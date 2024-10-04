@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
 
 st.set_page_config(page_title="Proyek Analisis Data")
+products_customer_orders_itemsorder_df = pd.read_csv(os.path.abspath('all_df.csv'))
 
-products_customer_orders_itemsorder_df = pd.read_csv('all_df.csv')
 
 
 st.write(
