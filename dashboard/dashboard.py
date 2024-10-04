@@ -6,7 +6,7 @@ import os
 
 
 st.set_page_config(page_title="Proyek Analisis Data")
-products_customer_orders_itemsorder_df = pd.read_csv(os.path.abspath('all_df.csv'))
+products_customer_orders_itemsorder_df = pd.read_csv(os.path.abspath('/dashboard/all_df.csv'))
 
 
 
