@@ -2,18 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
-from pathlib import Path
-
 
 st.set_page_config(page_title="Proyek Analisis Data")
 
-def load_data():
-    current_directory = os.getcwd()
-    data_path = current_directory + '\\dashboard\\all_df.csv'
-    return pd.read_csv(data_path)
-
-products_customer_orders_itemsorder_df = load_data()
+products_customer_orders_itemsorder_df = pd.read_csv('all_df.csv')
 
 
 st.write(
