@@ -37,13 +37,13 @@ with tab1:
 
     plt.title("Number of Sales by City", loc="center", fontsize=15)
     plt.ylabel("City")
-    plt.xlabel("Sales ($)")
+    plt.xlabel("Sales (\\$)")
     plt.tick_params(axis='y', labelsize=12)
 
     st.pyplot(plt)
+    plt.clf() 
 
-    st.write("Median jumlah penyewaan sepeda pada hari kerja lebih tinggi dibandingkan akhir pekan, dengan rata-rata penyewaan sepeda di hari kerja sebesar 4550,57 dan di akhir pekan sebesar 4389,69. Hal ini menunjukkan bahwa, secara umum, lebih banyak orang menyewa sepeda pada hari kerja.")
-
+    st.write("Secara signifikan, Sao Paulo dan Rio de Janeiro melakukan pembelian yang lebih banyak dibandingkan kota-kota lain. Tepatnya senilai \\$1,859,556.83, disusul oleh Rio de Janeiro sebesar \\$955,573.97. Hal ini berarti e-commerce ini memiliki basis pembeli yang besar di Sao Paulo dan Rio de Janeiro.")
 with tab2:
     st.header('Penjualan Produk Terbanyak')
     sales = products_customer_orders_itemsorder_df.groupby("product_category_name_english").price.sum().sort_values(ascending=False).reset_index()
@@ -64,11 +64,12 @@ with tab2:
 
     plt.title("Most Purchased Products", loc="center", fontsize=15)
     plt.ylabel("Product Category")
-    plt.xlabel("Price ($)")
+    plt.xlabel("Price (\\$)")
     plt.tick_params(axis='y', labelsize=12)
 
     st.pyplot(plt)
-    st.write("Median jumlah penyewaan sepeda pada hari kerja lebih tinggi dibandingkan akhir pekan, dengan rata-rata penyewaan sepeda di hari kerja sebesar 4550,57 dan di akhir pekan sebesar 4389,69. Hal ini menunjukkan bahwa, secara umum, lebih banyak orang menyewa sepeda pada hari kerja.")
+    plt.clf() 
+    st.write("Secara berurutan, penjualan produk tidak berbeda jauh satu sama lain. Produk dengan kategori health beauty menyumbang penjualan yang paling banyak, yaitu sebesar \\$1,233,131.72. Kemudian disusul oleh Watches Gifts sebesar \\$1,165,898.98 dan bed_bath_table sebesar \\$1,023,434.76.")
 
 with tab3:
     st.header('Tren Penjualan dalam Setahun Terakhir')
@@ -95,4 +96,5 @@ with tab3:
     plt.yticks(fontsize=10)
     
     st.pyplot(plt)
-    st.write("Median jumlah penyewaan sepeda pada hari kerja lebih tinggi dibandingkan akhir pekan, dengan rata-rata penyewaan sepeda di hari kerja sebesar 4550,57 dan di akhir pekan sebesar 4389,69. Hal ini menunjukkan bahwa, secara umum, lebih banyak orang menyewa sepeda pada hari kerja.")
+    plt.clf()
+    st.write("Secara garis besar, penjualan mengalami peningkatan selama setahun terakhir. Penjualan bulan Agustus 2018 sebesar \\$836,377.59, meningkat dibandingkan setahun sebelumnya yang bernilai \\$549,731.25. Namun, terjadi penurunan penjualan selama 3 bulan terakhir dengan nilai yang kurang lebih sama, yaitu \\$862,874.47 pada bulan Juli, \\$853,204.84 pada bulan Juni.")
